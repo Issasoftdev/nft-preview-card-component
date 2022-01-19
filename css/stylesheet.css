@@ -8,6 +8,7 @@
 }
 
 
+
 :root {
     --white: hsl(0, 0%, 100%);
     --softBlue: hsl(215, 51%, 70%);
@@ -45,10 +46,16 @@ main {
     display: flex;
     flex-direction: column;
     padding: 1.4rem;
+    box-shadow: 0.5rem 1rem 2rem -0.5rem;
+}
+
+.card-image {
+    height: 60%;
+    position: relative;
 }
 
 figure {
-    height: 60%;
+    height: 100%;
     background-image: url("../images/image-equilibrium.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -56,8 +63,26 @@ figure {
     border-radius: 3%;
 }
 
+
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3%;
+}
+
 .nft-name {
     margin: 1rem 0;
+}
+
+.nft-name:hover {
+    color: var(--cyan);
+    cursor: pointer;
 }
 
 .nft-description {
@@ -118,6 +143,15 @@ figure {
 
 span {
     color: var(--white);
+}
+
+span:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
 }
 
 .attribution { 
